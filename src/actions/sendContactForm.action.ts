@@ -8,5 +8,5 @@ interface ContactFormData {
 
 export const sendContactFormAction = async (data: ContactFormData) => {
   const resp = await formspreeApi.post('', data);
-  return console.log(resp.data);
+  return resp.data;
 };
