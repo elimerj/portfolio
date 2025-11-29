@@ -135,3 +135,29 @@ html {
 .pulse-glow {
   animation: pulseGlow 3s ease-in-out infinite;
 }
+
+/* ✅ Toast éxito con glow verde animado */
+.toast-success-glow {
+  border: 1px solid rgba(34, 197, 94, 0.6) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 185, 129, 0.15),
+    rgba(34, 197, 94, 0.25)
+  ) !important;
+  color: #22c55e !important;
+  box-shadow: 0 0 12px rgba(34, 197, 94, 0.4), 0 0 24px rgba(34, 197, 94, 0.25),
+    0 0 48px rgba(34, 197, 94, 0.15) !important;
+  animation: toastGlowPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes toastGlowPulse {
+  0% {
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.4), 0 0 24px rgba(34, 197, 94, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 22px rgba(34, 197, 94, 0.7), 0 0 44px rgba(34, 197, 94, 0.4);
+  }
+  100% {
+    box-shadow: 0 0 12px rgba(34, 197, 94, 0.4), 0 0 24px rgba(34, 197, 94, 0.2);
+  }
+}

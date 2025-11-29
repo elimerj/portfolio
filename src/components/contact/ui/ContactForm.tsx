@@ -29,6 +29,7 @@ export const ContactForm = () => {
 
       toast.success(t('toast.message'), {
         position: 'top-right',
+        className: 'toast-success-glow',
       });
 
       formElement.reset();
