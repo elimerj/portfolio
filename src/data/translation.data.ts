@@ -12,14 +12,14 @@ export const translations = {
     'hero.greeting': "Hi, I'm",
     'hero.title': 'Full-Stack Developer',
     'hero.subtitle':
-      'I craft beautiful, performant web experiences that users love',
+      'I craft beautiful, high-performance web experiences people love.',
     'hero.cta': 'View My Work',
     'hero.contact': 'Get In Touch',
 
     // About
     'about.title': 'About Me',
     'about.text':
-      "I'm a passionate full-stack developer with a keen eye for design and a love for creating seamless user experiences. With expertise in modern web technologies, I transform ideas into elegant, scalable solutions.",
+      "I'm a passionate full-stack developer with a strong eye for design and a focus on building seamless, user-friendly web experiences. I enjoy turning ideas into clean, scalable, and well-structured solutions that balance usability and performance.",
 
     'about.cardCodeTitle': 'Clean Code',
     'about.cardCodeDesc': 'I write clean, maintainable, and scalable code.',
@@ -38,12 +38,12 @@ export const translations = {
     // Skills
     'skills.title': 'Skills & Technologies',
     'skills.subtitle':
-      'The technologies and tools I use to build modern web applications.',
+      'The tools and technologies I use to build modern web applications.',
 
     // Projects
     'projects.title': 'Featured Projects',
     'projects.subtitle':
-      'Here are some of my recent projects that showcase my skills and passion for development.',
+      'Here are some of my recent projects showcasing my skills and passion for web development.',
     'projects.demo': 'Live Demo',
     'projects.code': 'Code',
 
@@ -87,14 +87,14 @@ export const translations = {
     'hero.greeting': 'Hola, soy',
     'hero.title': 'Desarrollador Full-Stack',
     'hero.subtitle':
-      'Creo experiencias web hermosas y eficientes que los usuarios adoran',
+      'Creo experiencias web bellas, rápidas y que la gente disfruta usar.',
     'hero.cta': 'Ver Mi Trabajo',
     'hero.contact': 'Contáctame',
 
     // About
     'about.title': 'Sobre Mí',
     'about.text':
-      'Soy un desarrollador full-stack apasionado con buen ojo para el diseño y amor por crear experiencias de usuario fluidas. Con experiencia en tecnologías web modernas, transformo ideas en soluciones elegantes y escalables.',
+      'Soy un desarrollador full-stack apasionado por el diseño y por crear experiencias de usuario fluidas y funcionales. Disfruto transformar ideas en soluciones limpias, escalables y bien estructuradas.',
     'about.cardCodeTitle': 'Código Limpio',
     'about.cardCodeDesc': 'Escribo código limpio, mantenible y escalable.',
 
@@ -110,12 +110,12 @@ export const translations = {
     // Skills
     'skills.title': 'Habilidades y Tecnologías',
     'skills.subtitle':
-      'Las tecnologías y herramientas que utilizo para crear aplicaciones web modernas.',
+      'Las herramientas y tecnologías que utilizo para desarrollar aplicaciones web modernas.',
 
     // Projects
     'projects.title': 'Proyectos Destacados',
     'projects.subtitle':
-      'Aquí tienes algunos de mis proyectos recientes que muestran mis habilidades y mi pasión por el desarrollo.',
+      'Aquí puedes ver algunos de mis proyectos recientes que reflejan mis habilidades y pasión por el desarrollo web.',
     'projects.demo': 'Live Demo',
     'projects.code': 'Código',
 
