@@ -31,7 +31,7 @@ export const ContactForm = () => {
         position: 'top-right',
       });
 
-      formElement.reset(); // limpia los <Field /> y el <textarea>
+      formElement.reset();
     } catch (error) {
       console.error(error);
     } finally {
