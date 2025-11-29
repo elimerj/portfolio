@@ -14,11 +14,19 @@ export const Hero = () => {
       id='hero'
       className='
         relative flex min-h-screen items-center justify-center
-        bg-linear-to-b from-slate-50 to-sky-100
+        bg-linear-to-b from-slate-100 to-sky-200
         dark:from-slate-950 dark:to-slate-900
       '
     >
-      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+      {/* FONDO */}
+      <div className='absolute inset-0 opacity-20'>
+        <img
+          src='/hero-bg.png' // o .svg según tu caso
+          alt='Hero background'
+          className='w-full h-full object-cover'
+        />
+      </div>
+      <div className='relative z-10 container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex flex-col items-center text-center gap-8'>
           {/* Avatar / Logo */}
           <div
@@ -27,6 +35,7 @@ export const Hero = () => {
               rounded-full border border-sky-300
               bg-white/80 text-sky-500 text-3xl font-bold shadow-sm
               dark:bg-slate-900/70 dark:border-sky-500/60
+              pulse-glow
             '
           >
             ED
@@ -96,7 +105,7 @@ export const Hero = () => {
             type='button'
             onClick={() => scrollTo('about')}
             className='
-              mt-10 inline-flex h-10 w-10 items-center justify-center
+               cursor-pointer  mt-10 inline-flex h-10 w-10 items-center justify-center
               rounded-full border border-slate-300/70
               bg-white/80 text-slate-500 shadow-sm
               transition

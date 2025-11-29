@@ -1,7 +1,7 @@
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Moon, Sun, Languages } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { translations } from '@/data/translation.data';
 
 type TranslationKey = keyof (typeof translations)['en'];
@@ -16,6 +16,10 @@ const NAV_LINKS: { id: string; key: TranslationKey }[] = [
 export const Navigation = () => {
   const { language, setLanguage, t } = useLanguage();
   const [isDark, setIsDark] = useState(true);
+
+  useEffect(() => {
+    document.documentElement.classList.add('dark');
+  }, []);
 
   const toggleTheme = () => {
     setIsDark((prev) => !prev);
