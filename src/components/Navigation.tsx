@@ -94,7 +94,7 @@ export const Navigation = () => {
                 variant='outline'
                 size='icon-sm'
                 onClick={toggleTheme}
-                className='cursor-pointer border-slate-200 bg-white/70 text-slate-700 shadow-xs hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-100 dark:hover:bg-slate-800/80'
+                className='border-slate-200 bg-white/70 text-slate-700 shadow-xs hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-100 dark:hover:bg-slate-800/80'
               >
                 {isDark ? (
                   <Sun className='size-4' />
@@ -128,7 +128,7 @@ export const Navigation = () => {
               type='button'
               onClick={() => setIsMobileMenuOpen((v) => !v)}
               aria-label='Toggle menu'
-              className='inline-flex items-center justify-center rounded-xl border border-border bg-card px-2 py-1 md:hidden'
+              className='cursor-pointer inline-flex items-center justify-center rounded-xl border border-border bg-card px-2 py-1 md:hidden'
             >
               {isMobileMenuOpen ? (
                 <X className='h-5 w-5 text-foreground' />
