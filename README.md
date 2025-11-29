@@ -1,73 +1,98 @@
-# React + TypeScript + Vite
+# 👋 Hi, I'm Elimer Duarte
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+💻 Full Stack Web Developer  
+⚡ React • TypeScript • Node.js • MySQL  
+🌱 Currently learning AWS to build scalable applications  
+📍 Based in Mexico | Open to remote opportunities
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 About Me
 
-## React Compiler
+I'm a passionate Full Stack Web Developer with experience building modern, scalable, and user-focused web applications. I enjoy working across the entire stack, from clean and responsive frontends to solid and secure backends.
 
-The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
+I focus on:
 
-## Expanding the ESLint configuration
+- Performance and clean architecture
+- Scalable APIs
+- Modern UI/UX
+- Real-world problem solving
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🛠 Tech Stack
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Frontend
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- React
+- TypeScript
+- JavaScript (ES6+)
+- HTML5 / CSS3
+- Tailwind CSS
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### Backend
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- Node.js
+- Express
+- REST APIs
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Databases & Tools
+
+- MySQL
+- MongoDB
+- Sequelize
+- Git & GitHub
+- Docker
+- Postman
+- Netlify
+- Render
+
+---
+
+## 📂 Featured Projects
+
+### 🎮 House of Games — Full-Stack Video Game E-Commerce
+
+Full-stack e-commerce platform with authentication, shopping cart, user management and admin panel.
+
+**Tech:** Express, Node.js, MySQL, Sequelize  
+🔗 Live: https://house-of-games-7jqg.onrender.com  
+💻 Code: https://github.com/elimerj/grupo_5_ProyectoIntegradorDG
+
+---
+
+### 🛒 Teslo Shop — Modern E-Commerce & Admin Dashboard
+
+Modern e-commerce platform with admin panel, product management, stock control and authentication.
+
+**Tech:** React, TypeScript, MongoDB, Docker, Redis  
+🔗 Live: https://teslo-shop-react-ts.netlify.app  
+💻 Code: https://github.com/elimerj/teslo-shop-app-react
+
+---
+
+### 🦸 Superhero Universe — Real-Time Heroes Platform
+
+Real-time superheroes platform with live data, search and dynamic statistics.
+
+**Tech:** React, TypeScript, Context API, Docker, Redis  
+🔗 Live: https://react-app-heroes-proyect.netlify.app  
+💻 Code: https://github.com/elimerj/heroes-app-frontend
+
+---
+
+## 🌐 Portfolio
+
+Personal portfolio showcasing my projects, skills and contact information.  
+🔗 https://TU-PORTFOLIO.netlify.app
+
+---
+
+## 🤝 Let's Connect
+
+- 💼 LinkedIn: https://www.linkedin.com/in/elimerduarte
+- 📧 Email: elimerduarte@outlook.com
+- 🌐 Portfolio: https://TU-PORTFOLIO.netlify.app
+- 📍 Based in Mexico
+
+✨ Always open to new opportunities and collaborations in web development.
