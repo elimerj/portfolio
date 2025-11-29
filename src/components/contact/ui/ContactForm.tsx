@@ -1,24 +1,42 @@
-import { Button } from '@/components/ui/button';
-import { Field } from './Field';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useState, type FormEvent } from 'react';
 import { toast } from 'sonner';
+import { sendContactFormAction } from '@/actions/sendContactForm.action';
+import { Field } from './Field';
+import { Button } from '@/components/ui/button';
 
 export const ContactForm = () => {
   const [isSending, setIsSending] = useState(false);
   const { t } = useLanguage();
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
     if (isSending) return;
     setIsSending(true);
 
-    setTimeout(() => {
+    try {
+      const formElement = e.currentTarget;
+      const formData = new FormData(formElement);
+
+      const data = {
+        name: String(formData.get('name') ?? ''),
+        email: String(formData.get('email') ?? ''),
+        message: String(formData.get('message') ?? ''),
+      };
+
+      await sendContactFormAction(data);
+
       toast.success(t('toast.message'), {
         position: 'top-right',
       });
+
+      formElement.reset(); // limpia los <Field /> y el <textarea>
+    } catch (error) {
+      console.error(error);
+    } finally {
       setIsSending(false);
-    }, 2000);
+    }
   };
 
   return (
