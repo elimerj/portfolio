@@ -1,9 +1,27 @@
 import { Button } from '@/components/ui/button';
 import { Field } from './Field';
 import { useLanguage } from '@/contexts/LanguageContext';
+import { useState, type FormEvent } from 'react';
+import { toast } from 'sonner';
 
 export const ContactForm = () => {
+  const [isSending, setIsSending] = useState(false);
   const { t } = useLanguage();
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (isSending) return;
+
+    setIsSending(true);
+
+    setTimeout(() => {
+      toast.success(t('toast.message'), {
+        position: 'top-right',
+      });
+      setIsSending(false);
+    }, 2000);
+  };
+
   return (
     <div className='group relative  '>
       <div
@@ -30,7 +48,7 @@ export const ContactForm = () => {
   group-hover:-translate-y-1
   hover:border-blue-500/70'
       >
-        <form onSubmit={(e) => e.preventDefault()} className='space-y-5'>
+        <form onSubmit={handleSubmit} className='space-y-5'>
           <div className='grid gap-4 md:grid-cols-2'>
             <Field
               label={t('contact.name')}
@@ -57,6 +75,7 @@ export const ContactForm = () => {
               id='message'
               name='message'
               rows={5}
+              required
               className='w-full rounded-2xl border border-border/70 bg-background/60
                                px-3.5 py-2.5 text-sm md:text-base
                                shadow-[0_0_0_1px_rgba(15,23,42,0.35)]
@@ -68,6 +87,7 @@ export const ContactForm = () => {
           </div>
 
           <Button
+            disabled={isSending}
             type='submit'
             size='lg'
             className='w-full md:w-auto bg-linear-to-r from-cyan-400 to-blue-600
@@ -76,7 +96,7 @@ export const ContactForm = () => {
                              shadow-[0_12px_35px_rgba(56,189,248,0.55)]
                              transition-transform hover:-translate-y-1px'
           >
-            {t('contact.send')}
+            {isSending ? t('contact.sending') : t('contact.send')}
           </Button>
         </form>
       </div>

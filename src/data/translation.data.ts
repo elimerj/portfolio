@@ -54,6 +54,7 @@ export const translations = {
     'contact.email': 'Your Email',
     'contact.message': 'Message',
     'contact.send': 'Send Message',
+    'contact.sending': 'Sending...',
 
     //form placeholder
     'placeholder.email': 'elimer@example.com',
@@ -67,6 +68,9 @@ export const translations = {
 
     //City
     'contact.city': 'Mexico City, MX - Remote',
+
+    //toaster
+    'toast.message': 'Message sent successfully',
 
     // Footer
     'footer.text': 'Built with passion and modern web technologies',
@@ -122,6 +126,7 @@ export const translations = {
     'contact.email': 'Tu Correo',
     'contact.message': 'Tu Mensaje',
     'contact.send': 'Enviar Mensaje',
+    'contact.sending': 'Enviando...',
 
     //form placeholder
     'placeholder.email': 'elimer@ejemplo.com',
@@ -135,6 +140,9 @@ export const translations = {
 
     //City
     'contact.city': 'Ciudad de México, MX - Remoto',
+
+    //toaster
+    'toast.message': 'Mensaje Enviado Correctamente',
     // Footer
     'footer.text': 'Construido con pasión y tecnologías web modernas',
   },
