@@ -94,7 +94,7 @@ export const Navigation = () => {
                 variant='outline'
                 size='icon-sm'
                 onClick={toggleTheme}
-                className='border-slate-200 bg-white/70 text-slate-700 shadow-xs hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-100 dark:hover:bg-slate-800/80'
+                className='cursor-pointer border-slate-200 bg-white/70 text-slate-700 shadow-xs hover:bg-slate-100 dark:border-slate-700 dark:bg-slate-900/80 dark:text-slate-100 dark:hover:bg-slate-800/80'
               >
                 {isDark ? (
                   <Sun className='size-4' />
@@ -158,8 +158,7 @@ export const Navigation = () => {
             <button
               key={link.id}
               onClick={() => scrollToSection(link.id)}
-              className='
-  block py-1
+              className='cursor-pointer block py-1
   text-slate-800 dark:text-neutral-200
   hover:text-sky-500 dark:hover:text-sky-400
   transition-colors
