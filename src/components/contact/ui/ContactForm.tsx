@@ -11,7 +11,6 @@ export const ContactForm = () => {
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (isSending) return;
-
     setIsSending(true);
 
     setTimeout(() => {
