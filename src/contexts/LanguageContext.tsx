@@ -1,5 +1,11 @@
 import { translations } from '@/data/translation.data';
-import { createContext, useContext, useState, type ReactNode } from 'react';
+import {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  type ReactNode,
+} from 'react';
 
 type Language = 'en' | 'es';
 type TranslationKey = keyof (typeof translations)['en']; // las claves de en/es
@@ -10,11 +16,29 @@ interface LanguageContextType {
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(
-  undefined
+  undefined,
 );
 
 export const LanguageProvider = ({ children }: { children: ReactNode }) => {
-  const [language, setLanguage] = useState<Language>('en');
+  const getBrowserLang = (): 'es' | 'en' => {
+    if (typeof window === 'undefined') return 'en'; // SSR safety
+
+    const lang = navigator.language.toLowerCase();
+    return lang.startsWith('es') ? 'es' : 'en';
+  };
+
+  const [language, setLanguage] = useState<'es' | 'en'>(() => {
+    if (typeof window === 'undefined') return 'en';
+
+    const saved = localStorage.getItem('lang');
+    if (saved === 'es' || saved === 'en') return saved;
+
+    return getBrowserLang();
+  });
+
+  useEffect(() => {
+    localStorage.setItem('lang', language);
+  }, [language]);
 
   const t = (key: TranslationKey): string => {
     return translations[language][key] ?? key;
