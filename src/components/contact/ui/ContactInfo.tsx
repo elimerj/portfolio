@@ -11,10 +11,10 @@ import {
 } from 'lucide-react';
 
 const email = 'elimerduarte@outlook.com';
-const whatsapp = 'https://wa.me/5215637036171?text=Hola%20vi%20tu%20portafolio';
+const whatsapp = 'https://wa.me/525637036171?text=Hola%20vi%20tu%20portafolio';
 const github = 'https://github.com/elimerj';
 const linkedln = 'https://linkedin.com/in/elimerduarte';
-const phone = '+52 (156) 3703 6171 ';
+const phone = '+52 (56) 3703 6171 ';
 
 export const ContactInfo = () => {
   const { t } = useLanguage();
